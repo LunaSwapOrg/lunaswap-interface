@@ -5,9 +5,9 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/logo.svg'
+import Logo from '../../assets/svg/logo_pink.svg'
 import LogoDark from '../../assets/svg/logo_white.svg'
-import Wordmark from '../../assets/svg/wordmark.svg'
+import Wordmark from '../../assets/svg/wordmark_pink.svg'
 import WordmarkDark from '../../assets/svg/wordmark_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
@@ -147,10 +147,10 @@ export default function Header() {
         <HeaderElement>
           <Title href=".">
             <UniIcon>
-              <img src={isDark ? LogoDark : Logo} alt="logo" />
+              <img src={isDark ? Logo : LogoDark} alt="logo" />
             </UniIcon>
             <TitleText>
-              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
+              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? Wordmark : WordmarkDark} alt="logo" />
             </TitleText>
           </Title>
         </HeaderElement>
