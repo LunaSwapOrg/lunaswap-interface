@@ -111,7 +111,7 @@ export default function Option({
   id: string
 }) {
   const content = (
-    <OptionCardClickable id={id} onClick={onClick} clickable={clickable && !active} active={active}>
+    <OptionCardClickable style={{ background: "#282828" }} id={id} onClick={onClick} clickable={clickable && !active} active={active}>
       <OptionCardLeft>
         <HeaderText color={color}>
           {active ? (

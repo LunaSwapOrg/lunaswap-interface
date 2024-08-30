@@ -73,7 +73,7 @@ const AccountElement = styled.div<{ active: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: ${({ theme, active }) => (!active ? theme.bg1 : theme.bg3)};
+  background-color: ${({ theme, active }) => (!active ? theme.bg1 : "#222")};
   border-radius: 12px;
   white-space: nowrap;
   width: 100%;
@@ -91,6 +91,7 @@ const TestnetWrapper = styled.div`
 `
 
 const NetworkCard = styled(YellowCard)`
+  background: #e8d2b2;
   width: fit-content;
   margin-right: 10px;
   border-radius: 12px;
@@ -143,7 +144,7 @@ export default function Header() {
 
   return (
     <HeaderFrame>
-      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
+      <RowBetween padding="1rem 1rem 0 1rem">
         <HeaderElement>
           <Title href=".">
             <UniIcon>
