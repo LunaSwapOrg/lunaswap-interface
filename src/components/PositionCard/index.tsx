@@ -153,7 +153,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
       : [undefined, undefined]
 
   return (
-    <HoverCard style={{ border: "1px solid #000" }} border={border}>
+    <HoverCard style={{ background: "#ffffff65" }} border={border}>
       <AutoColumn gap="12px">
         <FixedHeightRow onClick={() => setShowMore(!showMore)} style={{ cursor: 'pointer' }}>
           <RowFixed>
