@@ -61,7 +61,7 @@ export default function Pool() {
       <AppBody>
         <SwapPoolTabs active={'pool'} />
         <AutoColumn gap="lg" justify="center">
-          <ButtonPrimary id="join-pool-button" as={Link} style={{ padding: 16 }} to="/add/ETH">
+          <ButtonPrimary id="join-pool-button" as={Link} style={{ padding: 16, background: '#000' }} to="/add/ETH">
             <Text fontWeight={500} fontSize={20}>
               Add Liquidity
             </Text>
@@ -69,7 +69,7 @@ export default function Pool() {
 
           <AutoColumn gap="12px" style={{ width: '100%' }}>
             <RowBetween padding={'0 8px'}>
-              <Text color={theme.text1} fontWeight={500}>
+              <Text color={theme.bg6} fontWeight={500}>
                 Your Liquidity
               </Text>
               <Question text="When you add liquidity, you are given pool tokens that represent your share. If you don’t see a pool you joined in this list, try importing a pool below." />
@@ -102,7 +102,7 @@ export default function Pool() {
             )}
 
             <div>
-              <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
+              <Text color={'#222'} textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
                 {hasV1Liquidity ? 'Uniswap V1 liquidity found!' : "Don't see a pool you joined?"}{' '}
                 <StyledInternalLink id="import-pool-link" to={hasV1Liquidity ? '/migrate/v1' : '/find'}>
                   {hasV1Liquidity ? 'Migrate now.' : 'Import it.'}
@@ -114,7 +114,7 @@ export default function Pool() {
       </AppBody>
 
       <div style={{ display: 'flex', alignItems: 'center', marginTop: '1.5rem' }}>
-        <ButtonSecondary as={Link} style={{ width: 'initial' }} to="/migrate/v1">
+        <ButtonSecondary as={Link} style={{ width: 'initial', background: '#000', color: '#fff' }} to="/migrate/v1">
           Migrate V1 Liquidity
         </ButtonSecondary>
       </div>

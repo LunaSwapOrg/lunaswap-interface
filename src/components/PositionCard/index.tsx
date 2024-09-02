@@ -30,6 +30,7 @@ export const HoverCard = styled(Card)`
   :hover {
     border: 1px solid ${({ theme }) => darken(0.06, theme.bg2)};
   }
+  color: #000;
 `
 
 interface PositionCardProps {
@@ -152,7 +153,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
       : [undefined, undefined]
 
   return (
-    <HoverCard border={border}>
+    <HoverCard style={{ border: "1px solid #000" }} border={border}>
       <AutoColumn gap="12px">
         <FixedHeightRow onClick={() => setShowMore(!showMore)} style={{ cursor: 'pointer' }}>
           <RowFixed>
@@ -229,10 +230,10 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
               </ExternalLink>
             </AutoRow>
             <RowBetween marginTop="10px">
-              <ButtonSecondary as={Link} to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`} width="48%">
+              <ButtonSecondary style={{background: "#000", color: "#fff"}} as={Link} to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`} width="48%">
                 Add
               </ButtonSecondary>
-              <ButtonSecondary as={Link} width="48%" to={`/remove/${currencyId(currency0)}/${currencyId(currency1)}`}>
+              <ButtonSecondary style={{background: "#000", color: "#fff"}} as={Link} width="48%" to={`/remove/${currencyId(currency0)}/${currencyId(currency1)}`}>
                 Remove
               </ButtonSecondary>
             </RowBetween>
