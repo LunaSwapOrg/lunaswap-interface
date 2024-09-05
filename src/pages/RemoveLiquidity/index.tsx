@@ -594,7 +594,7 @@ export default function RemoveLiquidity({
                   id="liquidity-amount"
                 />
                 <ColumnCenter>
-                  <ArrowDown size="16" color={theme.text2} />
+                  <ArrowDown size="20" color={theme.bg3} />
                 </ColumnCenter>
                 <CurrencyInputPanel
                   hideBalance={true}
@@ -608,7 +608,7 @@ export default function RemoveLiquidity({
                   id="remove-liquidity-tokena"
                 />
                 <ColumnCenter>
-                  <Plus size="16" color={theme.text2} />
+                  <Plus size="20" color={theme.bg3} />
                 </ColumnCenter>
                 <CurrencyInputPanel
                   hideBalance={true}
@@ -624,7 +624,7 @@ export default function RemoveLiquidity({
               </>
             )}
             {pair && (
-              <div style={{ padding: '10px 20px' }}>
+              <div style={{ padding: '10px 20px', color: "#222" }}>
                 <RowBetween>
                   Price:
                   <div>
