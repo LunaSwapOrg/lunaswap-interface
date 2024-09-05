@@ -128,7 +128,7 @@ export default function PoolFinder() {
           <ColumnCenter
             style={{ justifyItems: 'center', backgroundColor: '', padding: '12px 0px', borderRadius: '12px' }}
           >
-            <Text textAlign="center" fontWeight={500}>
+            <Text color={'#222'} textAlign="center" fontWeight={500}>
               Pool Found!
             </Text>
           </ColumnCenter>
@@ -141,7 +141,7 @@ export default function PoolFinder() {
             ) : (
               <LightCard padding="45px 10px">
                 <AutoColumn gap="sm" justify="center">
-                  <Text textAlign="center">You don’t have liquidity in this pool yet.</Text>
+                  <Text color={'#6c7384'} textAlign="center">You don’t have liquidity in this pool yet.</Text>
                   <StyledInternalLink to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
                     <Text textAlign="center">Add liquidity.</Text>
                   </StyledInternalLink>
@@ -151,7 +151,7 @@ export default function PoolFinder() {
           ) : validPairNoLiquidity ? (
             <LightCard padding="45px 10px">
               <AutoColumn gap="sm" justify="center">
-                <Text textAlign="center">No pool found.</Text>
+                <Text color={'#6c7384'} textAlign="center">No pool found.</Text>
                 <StyledInternalLink to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
                   Create pool.
                 </StyledInternalLink>
@@ -160,7 +160,7 @@ export default function PoolFinder() {
           ) : pairState === PairState.INVALID ? (
             <LightCard padding="45px 10px">
               <AutoColumn gap="sm" justify="center">
-                <Text textAlign="center" fontWeight={500}>
+                <Text color={'#6c7384'} textAlign="center" fontWeight={500}>
                   Invalid pair.
                 </Text>
               </AutoColumn>
@@ -168,7 +168,7 @@ export default function PoolFinder() {
           ) : pairState === PairState.LOADING ? (
             <LightCard padding="45px 10px">
               <AutoColumn gap="sm" justify="center">
-                <Text textAlign="center">
+                <Text color={'#6c7384'} textAlign="center">
                   Loading
                   <Dots />
                 </Text>
