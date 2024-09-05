@@ -308,17 +308,14 @@ export default function Swap() {
             />
             <AutoColumn justify="space-between">
               <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
-                <ArrowWrapper onClick={() => {
-                      setApprovalSubmitted(false) // reset 2 step UI for approvals
-                      onSwitchTokens()
-                    }} style={{ background: "rgb(242, 242, 242)", width: "50px", height: "50px",display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "100%" }} clickable>
+                <ArrowWrapper clickable>
                   <ArrowDown
                     size="20"
                     onClick={() => {
                       setApprovalSubmitted(false) // reset 2 step UI for approvals
                       onSwitchTokens()
                     }}
-                    color={currencies[Field.INPUT] && currencies[Field.OUTPUT] ? theme.bg3 : theme.bg3}
+                    color={currencies[Field.INPUT] && currencies[Field.OUTPUT] ? theme.bg6 : theme.bg6}
                   />
                 </ArrowWrapper>
                 {recipient === null && !showWrap && isExpertMode ? (

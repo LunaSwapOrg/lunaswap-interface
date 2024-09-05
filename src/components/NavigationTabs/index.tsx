@@ -52,7 +52,7 @@ const ActiveText = styled.div`
 `
 
 const StyledArrowLeft = styled(ArrowLeft)`
-  color: ${({ theme }) => theme.text1};
+  color: ${({ theme }) => theme.bg6};
 `
 
 export function SwapPoolTabs({ active }: { active: 'swap' | 'pool' }) {
@@ -90,7 +90,7 @@ export function AddRemoveTabs({ adding }: { adding: boolean }) {
         <HistoryLink to="/pool">
           <StyledArrowLeft />
         </HistoryLink>
-        <ActiveText>{adding ? 'Add' : 'Remove'} Liquidity</ActiveText>
+        <ActiveText style={{ color: "#222" }}>{adding ? 'Add' : 'Remove'} Liquidity</ActiveText>
         <QuestionHelper
           text={
             adding

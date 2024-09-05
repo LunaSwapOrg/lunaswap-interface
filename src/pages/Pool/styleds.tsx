@@ -26,10 +26,10 @@ export const MaxButton = styled.button<{ width: string }>`
   overflow: hidden;
   color: ${({ theme }) => theme.primary1};
   :hover {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    border: 1px solid ${({ theme }) => theme.bg3};
   }
   :focus {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    border: 1px solid ${({ theme }) => theme.bg3};
     outline: none;
   }
 `

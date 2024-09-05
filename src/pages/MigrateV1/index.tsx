@@ -71,13 +71,13 @@ export default function MigrateV1() {
       <AutoColumn gap="16px">
         <AutoRow style={{ alignItems: 'center', justifyContent: 'space-between' }} gap="8px">
           <BackArrow to="/pool" />
-          <TYPE.mediumHeader>Migrate V1 Liquidity</TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ color: "#222" }}>Migrate V1 Liquidity</TYPE.mediumHeader>
           <div>
             <QuestionHelper text="Migrate your liquidity tokens from Uniswap V1 to Uniswap V2." />
           </div>
         </AutoRow>
 
-        <TYPE.body style={{ marginBottom: 8, fontWeight: 400 }}>
+        <TYPE.body style={{ marginBottom: 8, fontWeight: 400, color: "#222" }}>
           For each pool shown below, click migrate to remove your liquidity from Uniswap V1 and deposit it into Uniswap
           V2.
         </TYPE.body>

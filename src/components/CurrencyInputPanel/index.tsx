@@ -159,7 +159,7 @@ export default function CurrencyInputPanel({
   }, [setModalOpen])
 
   return (
-    <InputPanel id={id}>
+    <InputPanel style={{ width: "100%" }} id={id}>
       <Container hideInput={hideInput}>
         {!hideInput && (
           <LabelRow>

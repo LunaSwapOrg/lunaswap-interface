@@ -326,7 +326,7 @@ export default function AddLiquidity({
           <AutoColumn gap="20px">
             {noLiquidity && (
               <ColumnCenter>
-                <BlueCard>
+                <BlueCard style={{ background: "#000" }}>
                   <AutoColumn gap="10px">
                     <TYPE.link fontWeight={600} color={'primaryText1'}>
                       You are the first liquidity provider.
@@ -354,7 +354,7 @@ export default function AddLiquidity({
               showCommonBases
             />
             <ColumnCenter>
-              <Plus size="16" color={theme.text2} />
+              <Plus size="20" color={theme.bg6} />
             </ColumnCenter>
             <CurrencyInputPanel
               value={formattedAmounts[Field.CURRENCY_B]}
@@ -376,7 +376,7 @@ export default function AddLiquidity({
                       {noLiquidity ? 'Initial prices' : 'Prices'} and pool share
                     </TYPE.subHeader>
                   </RowBetween>{' '}
-                  <LightCard padding="1rem" borderRadius={'20px'}>
+                  <LightCard style={{ background: "#282828" }} padding="1rem" borderRadius={'20px'}>
                     <PoolPriceBar
                       currencies={currencies}
                       poolTokenPercentage={poolTokenPercentage}
@@ -389,7 +389,7 @@ export default function AddLiquidity({
             )}
 
             {!account ? (
-              <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
+              <ButtonLight style={{ background: "#000", color: "#fff" }} onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
             ) : (
               <AutoColumn gap={'md'}>
                 {(approvalA === ApprovalState.NOT_APPROVED ||

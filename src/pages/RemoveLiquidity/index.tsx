@@ -488,7 +488,7 @@ export default function RemoveLiquidity({
             <LightCard>
               <AutoColumn gap="20px">
                 <RowBetween>
-                  <Text fontWeight={500}>Amount</Text>
+                  <Text fontWeight={500} color={"#222"}>Amount</Text>
                   <ClickableText
                     fontWeight={500}
                     onClick={() => {
@@ -499,7 +499,7 @@ export default function RemoveLiquidity({
                   </ClickableText>
                 </RowBetween>
                 <Row style={{ alignItems: 'flex-end' }}>
-                  <Text fontSize={72} fontWeight={500}>
+                  <Text color={"#222"} fontSize={72} fontWeight={500}>
                     {formattedAmounts[Field.LIQUIDITY_PERCENT]}%
                   </Text>
                 </Row>
@@ -507,16 +507,16 @@ export default function RemoveLiquidity({
                   <>
                     <Slider value={innerLiquidityPercentage} onChange={setInnerLiquidityPercentage} />
                     <RowBetween>
-                      <MaxButton onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '25')} width="20%">
+                      <MaxButton style={{background: "#000", color: "#fff"}} onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '25')} width="20%">
                         25%
                       </MaxButton>
-                      <MaxButton onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '50')} width="20%">
+                      <MaxButton style={{background: "#000", color: "#fff"}} onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '50')} width="20%">
                         50%
                       </MaxButton>
-                      <MaxButton onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '75')} width="20%">
+                      <MaxButton style={{background: "#000", color: "#fff"}} onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '75')} width="20%">
                         75%
                       </MaxButton>
-                      <MaxButton onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '100')} width="20%">
+                      <MaxButton style={{background: "#000", color: "#fff"}} onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '100')} width="20%">
                         Max
                       </MaxButton>
                     </RowBetween>
@@ -527,10 +527,10 @@ export default function RemoveLiquidity({
             {!showDetailed && (
               <>
                 <ColumnCenter>
-                  <ArrowDown size="16" color={theme.text2} />
+                  <ArrowDown size="20" color={theme.bg6} />
                 </ColumnCenter>
                 <LightCard>
-                  <AutoColumn gap="10px">
+                  <AutoColumn style={{ color: "#222" }} gap="10px">
                     <RowBetween>
                       <Text fontSize={24} fontWeight={500}>
                         {formattedAmounts[Field.CURRENCY_A] || '-'}
