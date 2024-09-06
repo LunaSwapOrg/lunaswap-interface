@@ -40,7 +40,7 @@ export const ErrorText = styled(Text)<{ severity?: 0 | 1 | 2 | 3 | 4 }>`
       : severity === 2
       ? theme.yellow2
       : severity === 1
-      ? theme.text1
+      ? theme.bg6
       : theme.green1};
 `
 
